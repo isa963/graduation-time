@@ -295,14 +295,15 @@ section {
 }
 
 .gallery-item {
-    aspect-ratio: 1;
+    width: 100%;
+    padding-bottom: 100%;
+    position: relative;
     border-radius: 15px;
     overflow: hidden;
     background-size: cover;
     background-position: center;
     cursor: pointer;
     transition: all 0.3s ease;
-    position: relative;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
@@ -313,7 +314,10 @@ section {
 
 .placeholder-text {
     position: absolute;
-    inset: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     display: flex;
     align-items: center;
     justify-content: center;
