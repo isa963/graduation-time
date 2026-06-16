@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amina Isabela se gradúa - Invitation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Pantalla de Pregunta -->
+    <div id="questionScreen" class="screen active">
+        <div class="question-container">
+            <div class="question-content">
+                <h1 class="question-title">Amina Isabela se gradúa</h1>
+                <p class="question-text">¿De qué carrera?</p>
+                <div class="input-group">
+                    <input 
+                        type="text" 
+                        id="answerInput" 
+                        placeholder="Tu respuesta..." 
+                        class="answer-input"
+                    >
+                    <button class="submit-btn" onclick="checkAnswer()">Enviar</button>
+                </div>
+                <p class="error-message" id="errorMessage"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pantalla de Invitación -->
+    <div id="invitationScreen" class="screen">
+        <!-- Header con animación -->
+        <header class="invitation-header">
+            <div class="header-content">
+                <h1 class="main-title">Te Invito a mi Graduación</h1>
+                <p class="subtitle">Amina Isabela</p>
+            </div>
+        </header>
+
+        <!-- Cuenta Regresiva -->
+        <section class="countdown-section">
+            <h2 class="section-title">Cuenta Regresiva</h2>
+            <div class="countdown">
+                <div class="countdown-item">
+                    <span class="countdown-number" id="days">0</span>
+                    <span class="countdown-label">Días</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="hours">0</span>
+                    <span class="countdown-label">Horas</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="minutes">0</span>
+                    <span class="countdown-label">Minutos</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="seconds">0</span>
+                    <span class="countdown-label">Segundos</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Información del Evento -->
+        <section class="event-info-section">
+            <h2 class="section-title">Información del Evento</h2>
+            <div class="event-details">
+                <div class="detail-item">
+                    <span class="detail-icon">📅</span>
+                    <div class="detail-content">
+                        <p class="detail-label">Fecha</p>
+                        <p class="detail-value">20 de junio de 2026</p>
+                    </div>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-icon">🕖</span>
+                    <div class="detail-content">
+                        <p class="detail-label">Hora</p>
+                        <p class="detail-value">7:00 PM</p>
+                    </div>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-icon">📍</span>
+                    <div class="detail-content">
+                        <p class="detail-label">Ubicación</p>
+                        <p class="detail-value">Hacienda La Bartola</p>
+                        <p class="detail-address">Km 28, Querétaro, El Pedregal, 76229 Santa Rosa Jáuregui, Qro.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Galería de Fotos -->
+        <section class="gallery-section">
+            <h2 class="section-title">Galería</h2>
+            <div class="gallery-container">
+                <div class="gallery-item" style="background-image: url('https://via.placeholder.com/300x300?text=Foto+1');">
+                    <div class="placeholder-text">Foto 1</div>
+                </div>
+                <div class="gallery-item" style="background-image: url('https://via.placeholder.com/300x300?text=Foto+2');">
+                    <div class="placeholder-text">Foto 2</div>
+                </div>
+                <div class="gallery-item" style="background-image: url('https://via.placeholder.com/300x300?text=Foto+3');">
+                    <div class="placeholder-text">Foto 3</div>
+                </div>
+                <div class="gallery-item" style="background-image: url('https://via.placeholder.com/300x300?text=Foto+4');">
+                    <div class="placeholder-text">Foto 4</div>
+                </div>
+                <div class="gallery-item" style="background-image: url('https://via.placeholder.com/300x300?text=Foto+5');">
+                    <div class="placeholder-text">Foto 5</div>
+                </div>
+                <div class="gallery-item" style="background-image: url('https://via.placeholder.com/300x300?text=Foto+6');">
+                    <div class="placeholder-text">Foto 6</div>
+                </div>
+            </div>
+            <p class="gallery-note">* Reemplaza los placeholders con tus fotos</p>
+        </section>
+
+        <!-- Mapa de Ubicación -->
+        <section class="map-section">
+            <h2 class="section-title">¿Cómo Llegar?</h2>
+            <div class="map-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3721.569329482916!2d-100.39628!3d20.6124!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d3db1234567890%3A0x1234567890abcdef!2sHacienda%20La%20Bartola!5e0!3m2!1ses!2smx!4v1234567890"
+                    width="100%" 
+                    height="400" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+            <a href="https://share.google/QXRoauU0cUhlgKKnE" target="_blank" class="map-link">Abrir en Google Maps</a>
+        </section>
+
+        <!-- RSVP Section -->
+        <section class="rsvp-section">
+            <h2 class="section-title">Confirma tu Asistencia</h2>
+            <div class="rsvp-container">
+                <p class="rsvp-text">¿Me acompañarás en este día especial?</p>
+                <div class="rsvp-buttons">
+                    <button class="rsvp-btn rsvp-yes" onclick="respondRSVP('yes')">✨ Sí, voy a ir</button>
+                    <button class="rsvp-btn rsvp-no" onclick="respondRSVP('no')">💌 No puedo asistir</button>
+                </div>
+                <p class="rsvp-message" id="rsvpMessage"></p>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="invitation-footer">
+            <p class="footer-text">¡Espero verte pronto! 🎓✨</p>
+            <p class="footer-date">20 de Junio, 2026</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
